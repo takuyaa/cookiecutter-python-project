@@ -1,5 +1,5 @@
-SHELL := env PYTHON_VERSION=3.12 /bin/bash
-PYTHON_VERSION ?= 3.12
+SHELL := env PYTHON_VERSION={{ cookiecutter.python_version }} /bin/bash
+PYTHON_VERSION ?= {{ cookiecutter.python_version }}
 .SILENT: run devinstall install test lint format
 
 setup:
