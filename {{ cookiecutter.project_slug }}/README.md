@@ -2,14 +2,12 @@
 
 ## Setup
 
-```console
-make setup
-```
-
+Install required packages:
 ```console
 make install
 ```
-or
+
+Install all packages including development dependencies:
 ```console
 make devinstall
 ```
