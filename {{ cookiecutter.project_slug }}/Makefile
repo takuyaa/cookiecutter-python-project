@@ -2,15 +2,10 @@ SHELL := env PYTHON_VERSION={{ cookiecutter.python_version }} /bin/bash
 PYTHON_VERSION ?= {{ cookiecutter.python_version }}
 .SILENT: run devinstall install test lint format
 
-setup:
-	curl -LsSf https://astral.sh/uv/install.sh | sh
-
 install:
 	uv sync --frozen --no-dev
 
 devinstall:
-	uv python pin $(PYTHON_VERSION)
-	uv add pytest ruff mypy --dev
 	uv sync --frozen
 
 test:
